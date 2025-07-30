@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -37,4 +38,5 @@ public class DynamiteCapsule : MonoBehaviour
         interactionText.text = $"";
         isInside = false;
     }
+    
 }
