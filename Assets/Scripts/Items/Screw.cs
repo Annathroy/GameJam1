@@ -45,6 +45,7 @@ public class Screw : MonoBehaviour
             if (t >= 1f)
             {
                 isMoving = false;
+                // TODO: Change capsule model
                 Destroy(gameObject);
             }
         }

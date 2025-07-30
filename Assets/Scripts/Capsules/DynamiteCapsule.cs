@@ -5,6 +5,7 @@ using UnityEngine;
 public class DynamiteCapsule : MonoBehaviour
 {
     [SerializeField] private TMP_Text interactionText;
+    [SerializeField] private GameObject plantedTnt;
 
     private bool isInside;
     
@@ -12,8 +13,9 @@ public class DynamiteCapsule : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.HasDynamite() && isInside)
         {
-            // TODO: Change the model & free the player
-            Debug.Log("The C4 was planted");
+            plantedTnt.SetActive(true);
+            StartCoroutine(WaitForExplosion());
+            // TODO: Change the model
         }
     }
 
@@ -38,5 +40,12 @@ public class DynamiteCapsule : MonoBehaviour
         interactionText.text = $"";
         isInside = false;
     }
-    
+
+    private IEnumerator WaitForExplosion()
+    {
+        yield return new WaitForSeconds(1.5f);
+        GameManager.Instance.isTntExploded = true;
+        plantedTnt.SetActive(false);
+        
+    }
 }
