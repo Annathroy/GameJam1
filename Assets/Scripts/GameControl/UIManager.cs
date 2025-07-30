@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     }
     public void ShowMainMenu()
     {
+        Debug.Log("Showing Main Menu");
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
         gameOverBadEndingMenu.SetActive(false);
@@ -66,6 +67,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameMenu()
     {
+        Debug.Log("Showing Game Menu");
         mainMenu.SetActive(false);
         optionsMenu.SetActive(false);
         gameOverBadEndingMenu.SetActive(false);
