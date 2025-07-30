@@ -76,4 +76,20 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawCube(groundCheckPosition.position, groundCheckSize);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.TryGetComponent(out PlatformLeftAndRight platform))
+        {
+            transform.SetParent(other.transform);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.TryGetComponent(out PlatformLeftAndRight platform))
+        {
+            transform.SetParent(null);
+        }
+    }
 }
