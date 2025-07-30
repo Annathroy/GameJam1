@@ -12,7 +12,7 @@ public class NPCWayPointMovement2 : MonoBehaviour
 
     private void Update()
     {
-        if (reachedWayPoint1 == false)
+        if (reachedWayPoint1 == false && GameManager.Instance.isTntExploded)
         {
             MoveToWayPoint(wayPoint1);
         }

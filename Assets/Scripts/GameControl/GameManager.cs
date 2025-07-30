@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
     public bool isPlayerBelowPlatform = false;
     public static GameManager Instance;
     public bool isPlayerTouchingExitDoor = false;
+    public bool isTntExploded = false;
 
 
     private void Awake() 
