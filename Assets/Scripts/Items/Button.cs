@@ -18,6 +18,6 @@ public class Button : MonoBehaviour
     private void MoveButtonInside()
     {           
         //add sound
-                transform.position = new Vector2(transform.position.x-0.3f, transform.position.y);
+                transform.position = new Vector2(transform.position.x+0.3f, transform.position.y);
     }
 }
