@@ -70,13 +70,23 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Sets the <see cref="hasDrill"/> variable to true
     /// </summary>
-    public void PickUpDrill()
+    public void PickUpScrewdriver()
     {
         hasDrill = true;
+    }
+
+    public bool HasScrewdriver()
+    {
+        return hasDrill;
     }
 
     public void PickUpDynamite()
     {
         hasDynamite = true;
+    }
+
+    public bool HasDynamite()
+    {
+        return hasDynamite;
     }
 }

@@ -6,7 +6,7 @@ public class Drill : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController player))
         {
-            GameManager.Instance.PickUpDrill();
+            GameManager.Instance.PickUpScrewdriver();
             // TODO: Show in UI
     
             Destroy(gameObject);

@@ -6,7 +6,7 @@ public class Screwdriver : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController player))
         {
-            GameManager.Instance.PickUpDrill();
+            GameManager.Instance.PickUpScrewdriver();
             
             Destroy(gameObject);
         }
