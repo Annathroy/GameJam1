@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Screw : MonoBehaviour
 {
+    [SerializeField] private TMP_Text interactionText;
+    
     private Vector2 startPosition, targetPosition;
     private bool isWiggling;
     private bool isMoving;
 
     private float elapsedTime;
+    private bool isInside;
     
     private void Start()
     {
@@ -18,6 +22,13 @@ public class Screw : MonoBehaviour
 
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.E) && isInside)
+        {
+            if (!GameManager.Instance.HasScrewdriver()) StartCoroutine(WiggleTheScrew());
+            else isMoving = true;
+        }
+        
         if (isWiggling)
         {
             float hover = startPosition.y + (Mathf.PingPong(Time.time * 10f, 0.05f) - 0.025f);
@@ -43,12 +54,24 @@ public class Screw : MonoBehaviour
     {
         if (other.TryGetComponent(out PlayerController player))
         {
-            if (!GameManager.Instance.HasScrewdriver()) StartCoroutine(WiggleTheScrew());
+            isInside = true;
+            if (!GameManager.Instance.HasScrewdriver())
+            {
+                interactionText.text = $"Press E to wiggle the screw";
+            }
             else
             {
-                // TODO: Pull out the screw & change the capsule model
-                isMoving = true;
+                interactionText.text = $"Press E to use the Screwdriver";
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out PlayerController player))
+        {
+            interactionText.text = $"";
+            isInside = false;
         }
     }
 
