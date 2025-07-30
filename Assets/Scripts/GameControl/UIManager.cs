@@ -1,7 +1,7 @@
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
-
 {
     public static UIManager Instance;
     public GameObject mainMenu;
@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverGoodEndingMenu;
     public GameObject gameMenu;
     public GameObject gameOverCrushedEndingMenu;
+
+    [Header("Texts")] [SerializeField] private TMP_Text timerText;
 
     private void Awake()
     {
@@ -90,5 +92,10 @@ public class UIManager : MonoBehaviour
         gameOverNeutralEndingMenu.SetActive(false);
         gameOverGoodEndingMenu.SetActive(false);
         gameOverCrushedEndingMenu.SetActive(true);
+    }
+
+    public void UpdateTimerText(int seconds)
+    {
+        timerText.text = $"{seconds}";
     }
 }

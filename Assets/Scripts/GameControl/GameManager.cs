@@ -25,16 +25,18 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        timer = timeToSavePeople;
+        StartGame();
+        Time.timeScale = 0f;
     }
 
     private void Update()
     {
         timer -= Time.deltaTime;
 
+        UIManager.Instance.UpdateTimerText(Mathf.RoundToInt(timer));
+        
         if (timer <= 0)
         {
-            // TODO: Game over
             GameOver();
         }
     }
@@ -50,7 +52,10 @@ public class GameManager : MonoBehaviour
     
     private void GameOver()
     {
-        
+        Time.timeScale = 0f;
+        if (peopleSaved <= 0) UIManager.Instance.ShowGameOverBadEndingMenu();
+        else if (peopleSaved > 0 && peopleSaved < 4) UIManager.Instance.ShowGameOverNeutralEndingMenu();
+        else if (peopleSaved == 4) UIManager.Instance.ShowGameOverGoodEndingMenu();
     }
 
     /// <summary>
