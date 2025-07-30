@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isPlayerBelowPlatform = false;
     public static GameManager Instance;
     
     private void Awake() 

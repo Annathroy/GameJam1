@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverNeutralEndingMenu;
     public GameObject gameOverGoodEndingMenu;
     public GameObject gameMenu;
+    public GameObject gameOverCrushedEndingMenu;
 
     private void Awake()
     {
@@ -19,10 +20,7 @@ public class UIManager : MonoBehaviour
         }
 
     }
-    private void Start()
-    {
-        ShowMainMenu();
-    }
+
     public void ShowMainMenu()
     {
         Debug.Log("Showing Main Menu");
@@ -67,6 +65,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameMenu()
     {
+        Time.timeScale = 1f; // Resume the game if it was paused
         Debug.Log("Showing Game Menu");
         mainMenu.SetActive(false);
         optionsMenu.SetActive(false);
@@ -78,5 +77,18 @@ public class UIManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void RestartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+    public void ShowGameOverCrushedEndingMenu()
+    {
+        mainMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+        gameOverBadEndingMenu.SetActive(false);
+        gameOverNeutralEndingMenu.SetActive(false);
+        gameOverGoodEndingMenu.SetActive(false);
+        gameOverCrushedEndingMenu.SetActive(true);
     }
 }
