@@ -57,7 +57,8 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        playerRigidbody.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        //playerRigidbody.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocity.x, jumpPower);
     }
 
     private bool isGrounded()
