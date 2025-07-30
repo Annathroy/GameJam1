@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlatformUpAndDown : MonoBehaviour
 {
-    [SerializeField] private int scoreWorth = 1;
+    
 
     private Vector3 startPosition;
 
