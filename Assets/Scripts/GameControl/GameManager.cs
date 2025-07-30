@@ -4,7 +4,9 @@ public class GameManager : MonoBehaviour
 {
     public bool isPlayerBelowPlatform = false;
     public static GameManager Instance;
-    
+    public bool isPlayerTouchingExitDoor = false;
+
+
     private void Awake() 
     {
         if (Instance == null)
@@ -31,6 +33,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (isPlayerTouchingExitDoor)
+            {
+                GameOver();
+            }
+        }
         timer -= Time.deltaTime;
 
         UIManager.Instance.UpdateTimerText(Mathf.RoundToInt(timer));
@@ -50,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     }
     
-    private void GameOver()
+    public void GameOver()
     {
         Time.timeScale = 0f;
         if (peopleSaved <= 0) UIManager.Instance.ShowGameOverBadEndingMenu();
