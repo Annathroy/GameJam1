@@ -1,18 +1,22 @@
 using UnityEngine;
 
-public class NPCWayPointMovement2 : MonoBehaviour
+public class NPCWayPointMovement3 : MonoBehaviour
 {
     public static NPCWayPointMovement Instance;
     [SerializeField] private GameObject wayPoint1;
     [SerializeField] private GameObject wayPoint2;
     [SerializeField] private GameObject wayPoint3;
+    [SerializeField] private GameObject wayPoint4;
+    [SerializeField] private GameObject wayPoint5;
     [SerializeField] private bool reachedWayPoint1 = false;
     [SerializeField] private bool reachedWayPoint2 = false;
     [SerializeField] private bool reachedWayPoint3 = false;
+    [SerializeField] private bool reachedWayPoint4 = false;
+    [SerializeField] private bool reachedWayPoint5 = false;
 
     private void Update()
     {
-        if (reachedWayPoint1 == false && GameManager.Instance.isTntExploded)
+        if (reachedWayPoint1 == false && GameManager.Instance.isNpcUnscrewed)
         {
             MoveToWayPoint(wayPoint1);
         }
@@ -24,7 +28,16 @@ public class NPCWayPointMovement2 : MonoBehaviour
         {
             MoveToWayPoint(wayPoint3);
         }
-    
+
+        else if (reachedWayPoint3 && !reachedWayPoint4)
+        {
+            MoveToWayPoint(wayPoint4) ;
+        }
+        if (reachedWayPoint4 && !reachedWayPoint5)
+        {
+            MoveToWayPoint(wayPoint5);
+        }
+
     }
     private void MoveToWayPoint(GameObject wayPoint)
     {
@@ -33,9 +46,11 @@ public class NPCWayPointMovement2 : MonoBehaviour
         {
             if (wayPoint == wayPoint1) reachedWayPoint1 = true;
             else if (wayPoint == wayPoint2) reachedWayPoint2 = true;
-            else if (wayPoint == wayPoint3)
+            else if (wayPoint == wayPoint3) reachedWayPoint3 = true;
+            else if (wayPoint == wayPoint4) reachedWayPoint4 = true;
+            else if (wayPoint == wayPoint5)
             {
-                reachedWayPoint3 = true;
+                reachedWayPoint5 = true;
                 GameManager.Instance.NpcAtLocation++;
                 Destroy(gameObject.GetComponent<Rigidbody2D>());
             }

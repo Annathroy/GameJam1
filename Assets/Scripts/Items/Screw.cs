@@ -44,9 +44,11 @@ public class Screw : MonoBehaviour
 
             if (t >= 1f)
             {
+                GameManager.Instance.isNpcUnscrewed = true;
                 isMoving = false;
                 // TODO: Change capsule model
                 Destroy(gameObject);
+                
             }
         }
     }

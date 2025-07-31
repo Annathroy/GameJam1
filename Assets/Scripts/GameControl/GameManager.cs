@@ -8,26 +8,29 @@ public class GameManager : MonoBehaviour
     public bool isTntExploded = false;
 
 
-    private void Awake() 
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
     }
-    
+
     [Header("Items")]
     [SerializeField] private bool hasDrill;
     [SerializeField] private bool hasDynamite;
-    
+    public bool isNpcUnscrewed;
+
     [Header("Game Info")]
-    [SerializeField] private int peopleSaved = 0;
-    [SerializeField] private float timeToSavePeople = 30f;
+    public int peopleSaved = 0;
+    [SerializeField] private float timeToSavePeople = 70f;
+    public int NpcAtLocation = 0;
 
     private float timer;
 
     private void Start()
     {
+        NpcAtLocation = 0;
         StartGame();
         Time.timeScale = 0f;
     }
@@ -44,7 +47,7 @@ public class GameManager : MonoBehaviour
         timer -= Time.deltaTime;
 
         UIManager.Instance.UpdateTimerText(Mathf.RoundToInt(timer));
-        
+
         if (timer <= 0)
         {
             GameOver();
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
         hasDynamite = false;
 
     }
-    
+
     public void GameOver()
     {
         Time.timeScale = 0f;
