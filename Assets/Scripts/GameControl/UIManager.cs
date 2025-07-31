@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverCrushedEndingMenu;
     public GameObject creditsPanel;
     public GameObject dialogPanel;
+
+    [SerializeField] private Image screwdriverActiveImage;
+    [SerializeField] private Image dynamiteActiveImage;
 
     [Header("Texts")] [SerializeField] private TMP_Text timerText;
 
@@ -126,5 +130,20 @@ public class UIManager : MonoBehaviour
     public void CloseDoorDialog()
     {
         dialogPanel.SetActive(false);
+    }
+
+    public void ShowScrewdriverImage()
+    {
+        screwdriverActiveImage.gameObject.SetActive(true);
+    }
+
+    public void ShowDynamiteImage()
+    {
+        dynamiteActiveImage.gameObject.SetActive(true);
+    }
+    
+    public void HideDynamiteImage()
+    {
+        dynamiteActiveImage.gameObject.SetActive(false);
     }
 }

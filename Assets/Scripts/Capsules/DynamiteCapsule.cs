@@ -43,6 +43,7 @@ public class DynamiteCapsule : MonoBehaviour
 
     private IEnumerator WaitForExplosion()
     {
+        UIManager.Instance.HideDynamiteImage();
         yield return new WaitForSeconds(1.5f);
         AudioManager.Instance.PlantDynamiteSound();
         plantedTnt.SetActive(false);

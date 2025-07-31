@@ -9,6 +9,7 @@ public class Screwdriver : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isInside)
         {
             GameManager.Instance.PickUpScrewdriver();
+            UIManager.Instance.ShowScrewdriverImage();
             Destroy(gameObject);
         } 
     }

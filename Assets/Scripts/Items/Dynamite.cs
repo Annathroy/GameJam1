@@ -55,6 +55,9 @@ public class Dynamite : MonoBehaviour
             {
                 isMoving = false;
                 GameManager.Instance.PickUpDynamite();
+                
+                UIManager.Instance.ShowDynamiteImage();
+                
                 // TODO: Change capsule model
                 Destroy(gameObject);
             }
