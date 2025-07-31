@@ -17,7 +17,7 @@ public class Screw : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
-        targetPosition = startPosition + Vector2.right * 0.5f;
+        targetPosition = startPosition + Vector2.left * 0.5f;
     }
 
     private void Update()
@@ -45,6 +45,7 @@ public class Screw : MonoBehaviour
             if (t >= 1f)
             {
                 GameManager.Instance.isNpcUnscrewed = true;
+                GameManager.Instance.peopleSaved++;
                 isMoving = false;
                 // TODO: Change capsule model
                 Destroy(gameObject);

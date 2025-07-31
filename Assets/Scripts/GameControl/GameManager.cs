@@ -6,8 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public bool isPlayerTouchingExitDoor = false;
     public bool isTntExploded = false;
-
-
+    
     private void Awake()
     {
         if (Instance == null)
@@ -30,24 +29,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        NpcAtLocation = 0;
         StartGame();
         Time.timeScale = 0f;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (isPlayerTouchingExitDoor)
-            {
-                GameOver();
-            }
-        }
         timer -= Time.deltaTime;
-
         UIManager.Instance.UpdateTimerText(Mathf.RoundToInt(timer));
-
+        
+        if (Input.GetKeyDown(KeyCode.E) && isPlayerTouchingExitDoor)
+        {
+            GameOver();
+        }
+        
         if (timer <= 0)
         {
             GameOver();
@@ -57,10 +52,10 @@ public class GameManager : MonoBehaviour
     private void StartGame()
     {
         peopleSaved = 0;
+        NpcAtLocation = 0;
         timer = timeToSavePeople;
         hasDrill = false;
         hasDynamite = false;
-
     }
 
     public void GameOver()

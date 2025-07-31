@@ -1,9 +1,12 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance;
+    
     public TMP_Text volumeText;
     public Slider volumeSlider;
     public AudioSource volumeSource;
@@ -14,7 +17,15 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip buttonPressSound;
     [SerializeField] private AudioClip useScrewdriverSound;
     [SerializeField] private AudioClip dynamiteSound;
-    
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     private void Start()
     {
         volumeSlider.onValueChanged.AddListener(VolumeFunction);

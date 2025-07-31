@@ -24,10 +24,11 @@ public class Button : MonoBehaviour
     {
         upperRightChamberLocked.SetActive(false);
         upperRightChamberUnlocked.SetActive(true);
+        GameManager.Instance.peopleSaved++;
     }
     private void MoveButtonInside()
     {
         //add sound
-        transform.position = new Vector2(transform.position.x + 0.3f, transform.position.y);
+        transform.position = new Vector2(transform.position.x - 0.3f, transform.position.y);
     }
 }

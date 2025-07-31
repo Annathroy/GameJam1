@@ -44,8 +44,10 @@ public class DynamiteCapsule : MonoBehaviour
     private IEnumerator WaitForExplosion()
     {
         yield return new WaitForSeconds(1.5f);
-        GameManager.Instance.isTntExploded = true;
+        AudioManager.Instance.PlantDynamiteSound();
         plantedTnt.SetActive(false);
-        
+        yield return new WaitForSeconds(0.5f);
+        GameManager.Instance.isTntExploded = true;
+        GameManager.Instance.peopleSaved++;
     }
 }
