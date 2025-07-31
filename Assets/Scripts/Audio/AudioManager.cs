@@ -8,6 +8,13 @@ public class AudioManager : MonoBehaviour
     public Slider volumeSlider;
     public AudioSource volumeSource;
 
+    [Header("Audio Clips")] 
+    [SerializeField] private AudioClip buttonClickSound;
+    [SerializeField] private AudioClip pickUpSound;
+    [SerializeField] private AudioClip buttonPressSound;
+    [SerializeField] private AudioClip useScrewdriverSound;
+    [SerializeField] private AudioClip dynamiteSound;
+    
     private void Start()
     {
         volumeSlider.onValueChanged.AddListener(VolumeFunction);
@@ -18,6 +25,34 @@ public class AudioManager : MonoBehaviour
     {
         volumeText.text = $"Volume :{Mathf.RoundToInt(volume*100)}%";
         volumeSource.volume = volume;
+    }
+
+    public void PlayButtonClickSound()
+    {
+        volumeSource.PlayOneShot(buttonClickSound);
+    }
+
+    public void PlayPickUpSound()
+    {
+        volumeSource.PlayOneShot(pickUpSound);
+    }
+
+    /// <summary>
+    /// Sound for the in-game button, NOT the UI button
+    /// </summary>
+    public void PlayButtonPressedSound()
+    {
+        volumeSource.PlayOneShot(buttonPressSound);
+    }
+
+    public void UseScrewdriverSound()
+    {
+        volumeSource.PlayOneShot(useScrewdriverSound);
+    }
+
+    public void PlantDynamiteSound()
+    {
+        volumeSource.PlayOneShot(dynamiteSound);
     }
 }
 
