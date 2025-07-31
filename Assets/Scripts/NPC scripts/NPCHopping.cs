@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NPCHopping : MonoBehaviour
@@ -9,10 +10,14 @@ public class NPCHopping : MonoBehaviour
         startPosition = transform.position;
     }
 
+    private void OnEnable()
+    {
+        startPosition = transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
         float hover = startPosition.y + Mathf.PingPong(Time.time * 2f, 0.3f * 2f) - 0.150f;
         transform.position = new Vector2(transform.position.x, hover);
     }

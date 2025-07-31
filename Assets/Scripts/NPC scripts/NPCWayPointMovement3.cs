@@ -44,7 +44,7 @@ public class NPCWayPointMovement3 : MonoBehaviour
         else if (reachedWayPoint2 && !reachedWayPoint3)
         {
             MoveToWayPoint(wayPoint3);
-            npcHopping.enabled = false;
+            npcHopping.enabled = true;
         }
 
         else if (reachedWayPoint3 && !reachedWayPoint4)
@@ -55,7 +55,7 @@ public class NPCWayPointMovement3 : MonoBehaviour
         else if (reachedWayPoint4 && !reachedWayPoint5)
         {
             MoveToWayPoint(wayPoint5);
-            npcHopping.enabled = false;
+            npcHopping.enabled = true;
         }
         else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == false && isOnSpot2 == false && isOnSpot3 == false)
         {
