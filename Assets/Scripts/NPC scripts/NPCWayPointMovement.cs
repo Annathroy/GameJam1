@@ -10,30 +10,38 @@ public class NPCWayPointMovement : MonoBehaviour
     [SerializeField] private bool isOnSpot1 = false;
     [SerializeField] private bool isOnSpot2 = false;
     [SerializeField] private bool isOnSpot3 = false;
-
-
+    
     [SerializeField] private bool reachedWayPoint1 = false;
+
+    private NPCHopping npcHoppingScript;
+
+    private void Start()
+    {
+        npcHoppingScript = GetComponent<NPCHopping>();
+        npcHoppingScript.enabled = false;
+    }
 
     private void Update()
     {
         if (reachedWayPoint1 == false && Button.Instance.isButtonPressed==true)
         {
             MoveToWayPoint(wayPoint1);
+            npcHoppingScript.enabled = true;
         }
         if (reachedWayPoint1 && GameManager.Instance.spot1Taken==false && isOnSpot2==false && isOnSpot3==false)
         {
             MoveToWayPoint(wayPoint2);
-            
+            npcHoppingScript.enabled = false;
         }
         else if (reachedWayPoint1 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == false && isOnSpot1==false && isOnSpot3==false)
         {
             MoveToWayPoint(wayPoint3);
-             
+            npcHoppingScript.enabled = false;
         }
         else if (reachedWayPoint1 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == true && GameManager.Instance.spot3Taken == false && isOnSpot1 == false && isOnSpot2 == false)
         {
-           
             MoveToWayPoint(wayPoint4);
+            npcHoppingScript.enabled = false;
         }
 
 
@@ -41,11 +49,12 @@ public class NPCWayPointMovement : MonoBehaviour
     private void MoveToWayPoint(GameObject wayPoint)
     {
         transform.position = Vector2.MoveTowards(transform.position, wayPoint.transform.position, 2f * Time.deltaTime);
-        if (Vector2.Distance(transform.position, wayPoint.transform.position) < 0.1f)
+        if (Vector2.Distance(transform.position, wayPoint.transform.position) < 0.3f)
         {
             if (wayPoint == wayPoint1)
             {
-                reachedWayPoint1 = true;
+                reachedWayPoint1 = true; 
+                npcHoppingScript.enabled = false;
                 GameManager.Instance.NpcAtLocation++;
                 Destroy(gameObject.GetComponent<Rigidbody2D>());
             }

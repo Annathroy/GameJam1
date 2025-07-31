@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NPCWayPointMovement3 : MonoBehaviour
@@ -20,40 +21,56 @@ public class NPCWayPointMovement3 : MonoBehaviour
     [SerializeField] private bool isOnSpot2 = false;
     [SerializeField] private bool isOnSpot3 = false;
 
+    private NPCHopping npcHopping;
+
+    private void Start()
+    {
+        npcHopping = GetComponent<NPCHopping>();
+        npcHopping.enabled = false;
+    }
+
     private void Update()
     {
         if (reachedWayPoint1 == false && GameManager.Instance.isNpcUnscrewed)
         {
             MoveToWayPoint(wayPoint1);
+            npcHopping.enabled = true;
         }
         if (reachedWayPoint1 && !reachedWayPoint2)
         {
             MoveToWayPoint(wayPoint2);
+            npcHopping.enabled = false;
         }
         else if (reachedWayPoint2 && !reachedWayPoint3)
         {
             MoveToWayPoint(wayPoint3);
+            npcHopping.enabled = false;
         }
 
         else if (reachedWayPoint3 && !reachedWayPoint4)
         {
-            MoveToWayPoint(wayPoint4) ;
+            MoveToWayPoint(wayPoint4);
+            npcHopping.enabled = false;
         }
         else if (reachedWayPoint4 && !reachedWayPoint5)
         {
             MoveToWayPoint(wayPoint5);
+            npcHopping.enabled = false;
         }
         else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == false && isOnSpot2 == false && isOnSpot3 == false)
         {
             MoveToWayPoint(wayPoint6);
+            npcHopping.enabled = false;
         }
         else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == false && isOnSpot1 == false && isOnSpot3 == false)
         {
             MoveToWayPoint(wayPoint7);
+            npcHopping.enabled = false;
         }
         else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == true && GameManager.Instance.spot3Taken == false && isOnSpot1 == false && isOnSpot2 == false)
         {
             MoveToWayPoint(wayPoint8);
+            npcHopping.enabled = false;
         }
 
 
@@ -61,7 +78,7 @@ public class NPCWayPointMovement3 : MonoBehaviour
     private void MoveToWayPoint(GameObject wayPoint)
     {
         transform.position = Vector2.MoveTowards(transform.position, wayPoint.transform.position, 2f * Time.deltaTime);
-        if (Vector2.Distance(transform.position, wayPoint.transform.position) < 0.1f)
+        if (Vector2.Distance(transform.position, wayPoint.transform.position) < 0.3f)
         {
             if (wayPoint == wayPoint1) reachedWayPoint1 = true;
             else if (wayPoint == wayPoint2) reachedWayPoint2 = true;
