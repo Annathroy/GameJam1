@@ -18,7 +18,7 @@ public class NPCMovement : MonoBehaviour
         if (GameManager.Instance.peopleSaved >= 4)
         {
             transform.position = new Vector2(transform.position.x, -4.3f);
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(2f, -4.3f, 0f), 2f * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector3(2f, -4.3f, 0f), 2.5f * Time.deltaTime);
             npcHoppingScript.enabled = true;
         }
 

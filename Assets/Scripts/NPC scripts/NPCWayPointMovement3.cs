@@ -36,7 +36,7 @@ public class NPCWayPointMovement3 : MonoBehaviour
         if (GameManager.Instance.peopleSaved >= 4)
         {
             transform.position = new Vector2(transform.position.x, -4.3f);
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-1f, -4.3f, 0f), 2f * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-1f, -4.3f, 0f), 1f * Time.deltaTime);
             npcHopping.enabled = true;
         }
         
