@@ -13,6 +13,8 @@ public class Screw : MonoBehaviour
 
     private float elapsedTime;
     private bool isInside;
+
+    private Coroutine wiggleCoroutine;
     
     private void Start()
     {
@@ -25,13 +27,17 @@ public class Screw : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && isInside)
         {
-            if (!GameManager.Instance.HasScrewdriver()) StartCoroutine(WiggleTheScrew());
+            if (!GameManager.Instance.HasScrewdriver())
+            {
+                if (wiggleCoroutine != null) StopCoroutine(wiggleCoroutine);
+                wiggleCoroutine = StartCoroutine(WiggleTheScrew());
+            }
             else isMoving = true;
         }
         
         if (isWiggling)
         {
-            float hover = startPosition.y + (Mathf.PingPong(Time.time * 10f, 0.05f) - 0.025f);
+            float hover = startPosition.y + (Mathf.PingPong(Time.time * 0.3f, 0.1f) - 0.05f);
             transform.position = new Vector2(transform.position.x, hover);
         }
 
