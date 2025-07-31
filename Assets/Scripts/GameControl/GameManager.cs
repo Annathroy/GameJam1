@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public bool isPlayerTouchingExitDoor = false;
     public bool isTntExploded = false;
+    public bool isBoxInTriggerZone = false;
+    public bool isBoxDestroyed = false;
     public bool PlayerMovementDisabled { get; private set; } = false;
 
     [SerializeField] private bool exitedTheDoor;

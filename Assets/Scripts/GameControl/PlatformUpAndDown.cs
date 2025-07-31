@@ -23,6 +23,10 @@ public class PlatformUpAndDown : MonoBehaviour
             UIManager.Instance.ShowGameOverCrushedEndingMenu();
             Time.timeScale = 0f; // Stop the game
         }
+        if (collision.gameObject.TryGetComponent(out Box box) && GameManager.Instance.isBoxInTriggerZone == true)
+        {
+            box.DestroyBox();
+        }
     }
 
 }
