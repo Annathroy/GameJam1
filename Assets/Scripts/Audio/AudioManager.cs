@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
     
     public void VolumeFunction(float volume)
     {
-        volumeText.text = $"Volume :{Mathf.RoundToInt(volume*100)}%";
+        volumeText.text = $"Volume: {Mathf.RoundToInt(volume*100)}%";
         volumeSource.volume = volume;
     }
 
