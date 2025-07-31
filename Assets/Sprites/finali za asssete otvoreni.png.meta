@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 647fbd3a2edad524996f15b6894efa87
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2885834578882435178
+    second: finali za asssete otvoreni_0
+  - first:
+      213: 1656160256430220491
+    second: finali za asssete otvoreni_1
+  - first:
+      213: -2276157385000011007
+    second: finali za asssete otvoreni_2
+  - first:
+      213: 5023532166014966143
+    second: finali za asssete otvoreni_3
+  - first:
+      213: -5707455488497360943
+    second: finali za asssete otvoreni_4
+  - first:
+      213: 8350710972506612804
+    second: finali za asssete otvoreni_5
+  - first:
+      213: 3766067291103354178
+    second: finali za asssete otvoreni_6
+  - first:
+      213: -255973035933623913
+    second: finali za asssete otvoreni_7
+  - first:
+      213: -1237382582651848162
+    second: finali za asssete otvoreni_8
+  - first:
+      213: 6979461727152113462
+    second: finali za asssete otvoreni_9
+  - first:
+      213: -911298543801423635
+    second: finali za asssete otvoreni_10
+  - first:
+      213: 3883878403039422538
+    second: finali za asssete otvoreni_11
+  - first:
+      213: -1769414083348479837
+    second: finali za asssete otvoreni_12
+  - first:
+      213: 2229471166038006653
+    second: finali za asssete otvoreni_13
+  - first:
+      213: 4737446955386659337
+    second: finali za asssete otvoreni_14
+  - first:
+      213: -4651957473059426578
+    second: finali za asssete otvoreni_15
+  - first:
+      213: -2781332505366075488
+    second: finali za asssete otvoreni_16
+  - first:
+      213: 1341235359563654400
+    second: finali za asssete otvoreni_17
+  - first:
+      213: -2994148594549280912
+    second: finali za asssete otvoreni_18
+  - first:
+      213: 4701305869776021876
+    second: finali za asssete otvoreni_19
+  - first:
+      213: -6586141181543794648
+    second: finali za asssete otvoreni_20
+  - first:
+      213: -8168173291736202788
+    second: finali za asssete otvoreni_21
+  - first:
+      213: -2241174443307137756
+    second: finali za asssete otvoreni_22
+  - first:
+      213: 7738734405530570891
+    second: finali za asssete otvoreni_23
+  - first:
+      213: -560222591707670210
+    second: finali za asssete otvoreni_24
+  - first:
+      213: -8773732675408219930
+    second: finali za asssete otvoreni_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_0
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 937
+        width: 234
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6893da724b8c0820800000000000000
+      internalID: 2885834578882435178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 985
+        width: 142
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4a4af7afcdbf610800000000000000
+      internalID: 1656160256430220491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 915
+        width: 232
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b313efae67960e0800000000000000
+      internalID: -2276157385000011007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_3
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 947
+        width: 322
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f791211a3eb27b540800000000000000
+      internalID: 5023532166014966143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_4
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 804
+        width: 221
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dfd2ccf87b0bc0b0800000000000000
+      internalID: -5707455488497360943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_5
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 914
+        width: 235
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444a632b26fa3e370800000000000000
+      internalID: 8350710972506612804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_6
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 987
+        width: 138
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24dde6e6f32c34430800000000000000
+      internalID: 3766067291103354178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_7
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 717
+        width: 396
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799191941e9927cf0800000000000000
+      internalID: -255973035933623913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_8
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 693
+        width: 222
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1af7c5d81fe3dee0800000000000000
+      internalID: -1237382582651848162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_9
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 381
+        width: 1085
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637065a46770cd060800000000000000
+      internalID: 6979461727152113462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_10
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 702
+        width: 86
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8a26c7dca6a53f0800000000000000
+      internalID: -911298543801423635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 541
+        width: 87
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48e9f374de46e530800000000000000
+      internalID: 3883878403039422538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_12
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 388
+        width: 396
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0c0751447c177e0800000000000000
+      internalID: -1769414083348479837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_13
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 407
+        width: 222
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7bdba8963ca0fe10800000000000000
+      internalID: 2229471166038006653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_14
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 343
+        width: 264
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 902e316e7eaceb140800000000000000
+      internalID: 4737446955386659337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_15
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 258
+        width: 87
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeea11c435de07fb0800000000000000
+      internalID: -4651957473059426578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 100
+        width: 89
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7686f82d8b669d0800000000000000
+      internalID: -2781332505366075488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_17
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 94
+        width: 164
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0052cfe04760d9210800000000000000
+      internalID: 1341235359563654400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_18
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 134
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07fa72987b5a276d0800000000000000
+      internalID: -2994148594549280912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_19
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 96
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479657ca7c46e3140800000000000000
+      internalID: 4701305869776021876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_20
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 139
+        width: 43
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828b2818d735994a0800000000000000
+      internalID: -6586141181543794648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_21
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 0
+        width: 186
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd10b320ba1d4ae80800000000000000
+      internalID: -8168173291736202788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_22
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 94
+        width: 89
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4258ef2d7bfb5e0e0800000000000000
+      internalID: -2241174443307137756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_23
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 94
+        width: 204
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b805eb4b0f1856b60800000000000000
+      internalID: 7738734405530570891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_24
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 99
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e399d126580b938f0800000000000000
+      internalID: -560222591707670210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete otvoreni_25
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 106
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e03e00fd907d3680800000000000000
+      internalID: -8773732675408219930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      finali za asssete otvoreni_0: 2885834578882435178
+      finali za asssete otvoreni_1: 1656160256430220491
+      finali za asssete otvoreni_10: -911298543801423635
+      finali za asssete otvoreni_11: 3883878403039422538
+      finali za asssete otvoreni_12: -1769414083348479837
+      finali za asssete otvoreni_13: 2229471166038006653
+      finali za asssete otvoreni_14: 4737446955386659337
+      finali za asssete otvoreni_15: -4651957473059426578
+      finali za asssete otvoreni_16: -2781332505366075488
+      finali za asssete otvoreni_17: 1341235359563654400
+      finali za asssete otvoreni_18: -2994148594549280912
+      finali za asssete otvoreni_19: 4701305869776021876
+      finali za asssete otvoreni_2: -2276157385000011007
+      finali za asssete otvoreni_20: -6586141181543794648
+      finali za asssete otvoreni_21: -8168173291736202788
+      finali za asssete otvoreni_22: -2241174443307137756
+      finali za asssete otvoreni_23: 7738734405530570891
+      finali za asssete otvoreni_24: -560222591707670210
+      finali za asssete otvoreni_25: -8773732675408219930
+      finali za asssete otvoreni_3: 5023532166014966143
+      finali za asssete otvoreni_4: -5707455488497360943
+      finali za asssete otvoreni_5: 8350710972506612804
+      finali za asssete otvoreni_6: 3766067291103354178
+      finali za asssete otvoreni_7: -255973035933623913
+      finali za asssete otvoreni_8: -1237382582651848162
+      finali za asssete otvoreni_9: 6979461727152113462
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: d93a9d2610ae01044a7e27d9c5208675
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6141495532497004938
+    second: finali za asssete zatvoreni_0
+  - first:
+      213: 5071429317874509065
+    second: finali za asssete zatvoreni_1
+  - first:
+      213: 1182978341121970275
+    second: finali za asssete zatvoreni_2
+  - first:
+      213: -4282261887908571744
+    second: finali za asssete zatvoreni_3
+  - first:
+      213: 1107872055767134870
+    second: finali za asssete zatvoreni_4
+  - first:
+      213: -7929558814196468604
+    second: finali za asssete zatvoreni_5
+  - first:
+      213: -7242761938123442791
+    second: finali za asssete zatvoreni_6
+  - first:
+      213: -3230093311262261632
+    second: finali za asssete zatvoreni_7
+  - first:
+      213: -390145462638649050
+    second: finali za asssete zatvoreni_8
+  - first:
+      213: 3189417257696415045
+    second: finali za asssete zatvoreni_9
+  - first:
+      213: 4388439254305076536
+    second: finali za asssete zatvoreni_10
+  - first:
+      213: 1784390443145154664
+    second: finali za asssete zatvoreni_11
+  - first:
+      213: -2484173061063186929
+    second: finali za asssete zatvoreni_12
+  - first:
+      213: -4216929157832453839
+    second: finali za asssete zatvoreni_13
+  - first:
+      213: 2736461734258164143
+    second: finali za asssete zatvoreni_14
+  - first:
+      213: 802744693733633627
+    second: finali za asssete zatvoreni_15
+  - first:
+      213: -3114011021314695394
+    second: finali za asssete zatvoreni_16
+  - first:
+      213: 3601988323344378352
+    second: finali za asssete zatvoreni_17
+  - first:
+      213: -3264982672912180776
+    second: finali za asssete zatvoreni_18
+  - first:
+      213: -8014151138994641993
+    second: finali za asssete zatvoreni_19
+  - first:
+      213: -7015301560307175732
+    second: finali za asssete zatvoreni_20
+  - first:
+      213: -5358821570554101465
+    second: finali za asssete zatvoreni_21
+  - first:
+      213: 8435110208838400376
+    second: finali za asssete zatvoreni_22
+  - first:
+      213: 5261417985585490096
+    second: finali za asssete zatvoreni_23
+  - first:
+      213: -2059532142608802977
+    second: finali za asssete zatvoreni_24
+  - first:
+      213: 3619751041526813677
+    second: finali za asssete zatvoreni_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_0
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 937
+        width: 234
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6761edb2a5605caa0800000000000000
+      internalID: -6141495532497004938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 985
+        width: 142
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90569635816516640800000000000000
+      internalID: 5071429317874509065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_2
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 915
+        width: 232
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3605e879888ca6010800000000000000
+      internalID: 1182978341121970275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_3
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 947
+        width: 322
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5140850895294c0800000000000000
+      internalID: -4282261887908571744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_4
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 804
+        width: 221
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692f494d3c3ff5f00800000000000000
+      internalID: 1107872055767134870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_5
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 914
+        width: 235
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4847046654c84f190800000000000000
+      internalID: -7929558814196468604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_6
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 987
+        width: 138
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995be6d146a8c7b90800000000000000
+      internalID: -7242761938123442791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_7
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 717
+        width: 396
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ef8d64f376c23d0800000000000000
+      internalID: -3230093311262261632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_8
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 693
+        width: 222
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62161b0d4cce59af0800000000000000
+      internalID: -390145462638649050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_9
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 381
+        width: 1085
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54dce7df816134c20800000000000000
+      internalID: 3189417257696415045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_10
+      rect:
+        serializedVersion: 2
+        x: 1826
+        y: 702
+        width: 86
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835fb37304ed6ec30800000000000000
+      internalID: 4388439254305076536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 541
+        width: 87
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860d44867ad63c810800000000000000
+      internalID: 1784390443145154664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_12
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 388
+        width: 396
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06ebbe33c1768dd0800000000000000
+      internalID: -2484173061063186929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_13
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 407
+        width: 222
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131d860f5457a75c0800000000000000
+      internalID: -4216929157832453839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_14
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 343
+        width: 264
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa148ebe27dd9f520800000000000000
+      internalID: 2736461734258164143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_15
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 258
+        width: 87
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ea25bbb0ce32b00800000000000000
+      internalID: 802744693733633627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_16
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 100
+        width: 89
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fd2ef897fc8c4d0800000000000000
+      internalID: -3114011021314695394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_17
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 94
+        width: 105
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9eb02cb45dcf130800000000000000
+      internalID: 3601988323344378352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_18
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 134
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d9934fbe8370b2d0800000000000000
+      internalID: -3264982672912180776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_19
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 96
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b3aee7fff308c090800000000000000
+      internalID: -8014151138994641993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_20
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 139
+        width: 43
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccea5a94664a4ae90800000000000000
+      internalID: -7015301560307175732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_21
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 0
+        width: 186
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7210c608c24a1a5b0800000000000000
+      internalID: -5358821570554101465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_22
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 94
+        width: 89
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87975173b088f0570800000000000000
+      internalID: 8435110208838400376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_23
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 94
+        width: 193
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8acad18cf440940800000000000000
+      internalID: 5261417985585490096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_24
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 99
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b9d4c9d621b63e0800000000000000
+      internalID: -2059532142608802977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finali za asssete zatvoreni_25
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 106
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de35e8dd460fb3230800000000000000
+      internalID: 3619751041526813677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      finali za asssete zatvoreni_0: -6141495532497004938
+      finali za asssete zatvoreni_1: 5071429317874509065
+      finali za asssete zatvoreni_10: 4388439254305076536
+      finali za asssete zatvoreni_11: 1784390443145154664
+      finali za asssete zatvoreni_12: -2484173061063186929
+      finali za asssete zatvoreni_13: -4216929157832453839
+      finali za asssete zatvoreni_14: 2736461734258164143
+      finali za asssete zatvoreni_15: 802744693733633627
+      finali za asssete zatvoreni_16: -3114011021314695394
+      finali za asssete zatvoreni_17: 3601988323344378352
+      finali za asssete zatvoreni_18: -3264982672912180776
+      finali za asssete zatvoreni_19: -8014151138994641993
+      finali za asssete zatvoreni_2: 1182978341121970275
+      finali za asssete zatvoreni_20: -7015301560307175732
+      finali za asssete zatvoreni_21: -5358821570554101465
+      finali za asssete zatvoreni_22: 8435110208838400376
+      finali za asssete zatvoreni_23: 5261417985585490096
+      finali za asssete zatvoreni_24: -2059532142608802977
+      finali za asssete zatvoreni_25: 3619751041526813677
+      finali za asssete zatvoreni_3: -4282261887908571744
+      finali za asssete zatvoreni_4: 1107872055767134870
+      finali za asssete zatvoreni_5: -7929558814196468604
+      finali za asssete zatvoreni_6: -7242761938123442791
+      finali za asssete zatvoreni_7: -3230093311262261632
+      finali za asssete zatvoreni_8: -390145462638649050
+      finali za asssete zatvoreni_9: 3189417257696415045
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
