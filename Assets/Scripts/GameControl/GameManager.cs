@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public bool isPlayerTouchingExitDoor = false;
     public bool isTntExploded = false;
+    public bool PlayerMovementDisabled { get; private set; } = false;
+
+    [SerializeField] private bool exitedTheDoor;
     
     private void Awake()
     {
@@ -40,17 +43,19 @@ public class GameManager : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E) && isPlayerTouchingExitDoor)
         {
-            GameOver();
+            UIManager.Instance.ShowDoorDialog();
+            PlayerMovementDisabled = true;
         }
         
         if (timer <= 0)
         {
-            GameOver();
+            GameOver(true);
         }
     }
 
     private void StartGame()
     {
+        PlayerMovementDisabled = false;
         peopleSaved = 0;
         NpcAtLocation = 0;
         timer = timeToSavePeople;
@@ -64,6 +69,12 @@ public class GameManager : MonoBehaviour
         if (peopleSaved <= 0) UIManager.Instance.ShowGameOverBadEndingMenu();
         else if (peopleSaved > 0 && peopleSaved < 4) UIManager.Instance.ShowGameOverNeutralEndingMenu();
         else if (peopleSaved == 4) UIManager.Instance.ShowGameOverGoodEndingMenu();
+    }
+
+    public void GameOver(bool isTimeOut)
+    {
+        Time.timeScale = 0f;
+        UIManager.Instance.ShowGameOverBadEndingMenu();
     }
 
     /// <summary>
@@ -87,5 +98,16 @@ public class GameManager : MonoBehaviour
     public bool HasDynamite()
     {
         return hasDynamite;
+    }
+
+    public void ExitThruDoor()
+    {
+        UIManager.Instance.CloseDoorDialog();
+        GameOver();
+    }
+
+    public void ResumePlayerMovement()
+    {
+        PlayerMovementDisabled = false;
     }
 }

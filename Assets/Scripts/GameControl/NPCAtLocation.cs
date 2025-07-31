@@ -11,7 +11,7 @@ public class NPCAtLocation : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.NpcAtLocation == 3 && isPlayerAtLocation)
         {
             GameManager.Instance.peopleSaved++;
-            GameManager.Instance.GameOver();
+            //GameManager.Instance.GameOver();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

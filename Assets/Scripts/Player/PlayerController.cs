@@ -40,6 +40,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.PlayerMovementDisabled)
+        {
+            moveAmount = 0f;
+            Moving();
+            return;
+        }
+        
         moveAmount = moveAction.ReadValue<Vector2>().x;
 
         Moving();

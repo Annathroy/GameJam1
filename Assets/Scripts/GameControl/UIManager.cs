@@ -7,10 +7,15 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenu;
     public GameObject optionsMenu;
     public GameObject gameOverBadEndingMenu;
+    
     public GameObject gameOverNeutralEndingMenu;
+    public TMP_Text gameOverNeutralEndingText;
+    
     public GameObject gameOverGoodEndingMenu;
     public GameObject gameMenu;
     public GameObject gameOverCrushedEndingMenu;
+    public GameObject creditsPanel;
+    public GameObject dialogPanel;
 
     [Header("Texts")] [SerializeField] private TMP_Text timerText;
 
@@ -61,14 +66,16 @@ public class UIManager : MonoBehaviour
         mainMenu.SetActive(false);
         optionsMenu.SetActive(false);
         gameOverBadEndingMenu.SetActive(false);
+        
+        gameOverNeutralEndingText.text = $"You saved {GameManager.Instance.peopleSaved} people...";
         gameOverNeutralEndingMenu.SetActive(true);
+        
         gameOverGoodEndingMenu.SetActive(false);
     }
 
     public void ShowGameMenu()
     {
         Time.timeScale = 1f; // Resume the game if it was paused
-        Debug.Log("Showing Game Menu");
         mainMenu.SetActive(false);
         optionsMenu.SetActive(false);
         gameOverBadEndingMenu.SetActive(false);
@@ -94,8 +101,30 @@ public class UIManager : MonoBehaviour
         gameOverCrushedEndingMenu.SetActive(true);
     }
 
+    public void ShowCreditsPanel()
+    {
+        mainMenu.SetActive(false);
+        creditsPanel.SetActive(true);
+    }
+
+    public void ShowMainMenuFromCredits()
+    {
+        mainMenu.SetActive(true);
+        creditsPanel.SetActive(false);
+    }
+
     public void UpdateTimerText(int seconds)
     {
         timerText.text = $"{seconds}";
+    }
+
+    public void ShowDoorDialog()
+    {
+        dialogPanel.SetActive(true);
+    }
+
+    public void CloseDoorDialog()
+    {
+        dialogPanel.SetActive(false);
     }
 }
