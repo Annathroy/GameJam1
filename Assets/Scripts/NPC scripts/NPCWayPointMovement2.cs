@@ -6,9 +6,15 @@ public class NPCWayPointMovement2 : MonoBehaviour
     [SerializeField] private GameObject wayPoint1;
     [SerializeField] private GameObject wayPoint2;
     [SerializeField] private GameObject wayPoint3;
+    [SerializeField] private GameObject wayPoint4;
+    [SerializeField] private GameObject wayPoint5;
+    [SerializeField] private GameObject wayPoint6;
     [SerializeField] private bool reachedWayPoint1 = false;
     [SerializeField] private bool reachedWayPoint2 = false;
     [SerializeField] private bool reachedWayPoint3 = false;
+    [SerializeField] private bool isOnSpot1 = false;
+    [SerializeField] private bool isOnSpot2 = false;
+    [SerializeField] private bool isOnSpot3 = false;
 
     private void Update()
     {
@@ -24,7 +30,19 @@ public class NPCWayPointMovement2 : MonoBehaviour
         {
             MoveToWayPoint(wayPoint3);
         }
-    
+        else if (reachedWayPoint3 && GameManager.Instance.spot1Taken == false && isOnSpot2 == false && isOnSpot3==false)
+        {
+            MoveToWayPoint(wayPoint4);
+        }
+        else if (reachedWayPoint3 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == false && isOnSpot1==false && isOnSpot3 == false)
+        {
+            MoveToWayPoint(wayPoint5);
+        }
+        else if (reachedWayPoint3 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == true && GameManager.Instance.spot3Taken == false && isOnSpot1 == false && isOnSpot2 == false)
+        {
+            MoveToWayPoint(wayPoint6);
+        }
+
     }
     private void MoveToWayPoint(GameObject wayPoint)
     {
@@ -38,6 +56,21 @@ public class NPCWayPointMovement2 : MonoBehaviour
                 reachedWayPoint3 = true;
                 GameManager.Instance.NpcAtLocation++;
                 Destroy(gameObject.GetComponent<Rigidbody2D>());
+            }
+            if (wayPoint == wayPoint4)
+            {
+                GameManager.Instance.spot1Taken = true;
+                isOnSpot1 = true;
+            }
+            if (wayPoint == wayPoint5)
+            {
+                GameManager.Instance.spot2Taken = true;
+                isOnSpot2 = true;
+            }
+            if (wayPoint == wayPoint6)
+            {
+                GameManager.Instance.spot3Taken = true;
+                isOnSpot3 = true;
             }
 
 

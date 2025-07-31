@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public int peopleSaved = 0;
     [SerializeField] private float timeToSavePeople = 70f;
     public int NpcAtLocation = 0;
+    public bool spot1Taken = false;
+    public bool spot2Taken = false;
+    public bool spot3Taken = false;
 
     private float timer;
 
