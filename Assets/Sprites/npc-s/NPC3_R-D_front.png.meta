@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d1422579e30d16d4687e28eebd3b97b0
+guid: 21547c36dca6a104d90bb49a3ca97885
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7727699653290786065
-    second: Vent_Opend_0
+      213: -6519588954162461005
+    second: NPC3_R-D_front_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vent_Opend_0
+      name: NPC3_R-D_front_0
       rect:
         serializedVersion: 2
-        x: 919
-        y: 434
-        width: 75
-        height: 93
+        x: 752
+        y: 13
+        width: 415
+        height: 541
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11d7e4d34ed4e3b60800000000000000
-      internalID: 7727699653290786065
+      spriteID: 3b606917364c585a0800000000000000
+      internalID: -6519588954162461005
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vent_Opend_0: 7727699653290786065
+      NPC3_R-D_front_0: -6519588954162461005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

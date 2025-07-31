@@ -1,16 +1,31 @@
+using System;
 using UnityEngine;
 
 public class Screwdriver : MonoBehaviour
 {
     private bool isInside;
-    
+
+    [SerializeField] private GameObject closedHatch;
+    [SerializeField] private GameObject openHatch;
+
+    private void Start()
+    {
+        closedHatch.SetActive(true);
+        openHatch.SetActive(false);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isInside)
         {
             GameManager.Instance.PickUpScrewdriver();
+            openHatch.SetActive(true);
+            closedHatch.SetActive(false);
+            
             UIManager.Instance.ShowScrewdriverImage();
-            Destroy(gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            isInside = false;
+            //Destroy(gameObject);
         } 
     }
 

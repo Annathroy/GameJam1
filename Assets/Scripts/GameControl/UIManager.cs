@@ -18,8 +18,8 @@ public class UIManager : MonoBehaviour
     public GameObject creditsPanel;
     public GameObject dialogPanel;
 
-    [SerializeField] private Image screwdriverActiveImage;
-    [SerializeField] private Image dynamiteActiveImage;
+    [SerializeField] private GameObject screwdriverActiveImage;
+    [SerializeField] private GameObject dynamiteActiveImage;
 
     [Header("Texts")] [SerializeField] private TMP_Text timerText;
 

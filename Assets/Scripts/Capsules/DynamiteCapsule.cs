@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -8,14 +9,24 @@ public class DynamiteCapsule : MonoBehaviour
     [SerializeField] private GameObject plantedTnt;
 
     private bool isInside;
+
+    [SerializeField] private Sprite closedCapsule;
+    [SerializeField] private Sprite brokenCapsule;
     
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = closedCapsule;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.HasDynamite() && isInside)
         {
             plantedTnt.SetActive(true);
             StartCoroutine(WaitForExplosion());
-            // TODO: Change the model
         }
     }
 
@@ -46,6 +57,9 @@ public class DynamiteCapsule : MonoBehaviour
         UIManager.Instance.HideDynamiteImage();
         yield return new WaitForSeconds(1.5f);
         AudioManager.Instance.PlantDynamiteSound();
+
+        spriteRenderer.sprite = brokenCapsule;
+        
         plantedTnt.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         GameManager.Instance.isTntExploded = true;

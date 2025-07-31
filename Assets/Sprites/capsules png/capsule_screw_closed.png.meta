@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d1422579e30d16d4687e28eebd3b97b0
+guid: 2a0b5afb70a7cf241af2d961a0a83c62
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7727699653290786065
-    second: Vent_Opend_0
+      213: 909270382990603049
+    second: capsule_screw_closed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vent_Opend_0
+      name: capsule_screw_closed_0
       rect:
         serializedVersion: 2
-        x: 919
-        y: 434
-        width: 75
-        height: 93
+        x: 1617
+        y: 737
+        width: 105
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11d7e4d34ed4e3b60800000000000000
-      internalID: 7727699653290786065
+      spriteID: 92330f688906e9c00800000000000000
+      internalID: 909270382990603049
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vent_Opend_0: 7727699653290786065
+      capsule_screw_closed_0: 909270382990603049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

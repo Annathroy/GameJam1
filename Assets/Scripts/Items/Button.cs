@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class Button : MonoBehaviour
     public bool isButtonPressed;
     public TMP_Text interactionText;
 
+    public Sprite buttonUnPressed;
+    public Sprite buttonPressed;
+
+    private SpriteRenderer spriteRenderer;
+    
     private void Awake()
     {
         if (Instance == null)
@@ -18,13 +24,19 @@ public class Button : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = buttonUnPressed;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isInside && !isButtonPressed)
         {
             ChamberControl();
-            MoveButtonInside();
             isButtonPressed = true;
+            spriteRenderer.sprite = buttonPressed;
             //GetComponent<Collider2D>().isTrigger = false;
         }
     }
@@ -49,9 +61,4 @@ public class Button : MonoBehaviour
         GameManager.Instance.peopleSaved++;
     }
     
-    private void MoveButtonInside()
-    {
-        //add sound
-        transform.position = new Vector2(transform.position.x - 0.1f, transform.position.y);
-    }
 }

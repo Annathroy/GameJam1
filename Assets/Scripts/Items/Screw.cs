@@ -15,9 +15,16 @@ public class Screw : MonoBehaviour
     private bool isInside;
 
     private Coroutine wiggleCoroutine;
+
+    [SerializeField] private SpriteRenderer capsuleRenderer;
+
+    [SerializeField] private Sprite closedCapsule;
+    [SerializeField] private Sprite openCapsule;
+        
     
     private void Start()
     {
+        capsuleRenderer.sprite = closedCapsule;
         startPosition = transform.position;
         targetPosition = startPosition + Vector2.left * 0.5f;
     }
@@ -54,6 +61,7 @@ public class Screw : MonoBehaviour
                 GameManager.Instance.peopleSaved++;
                 isMoving = false;
                 // TODO: Change capsule model
+                capsuleRenderer.sprite = openCapsule;
                 Destroy(gameObject);
                 
             }

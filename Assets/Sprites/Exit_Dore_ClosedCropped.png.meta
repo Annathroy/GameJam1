@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d1422579e30d16d4687e28eebd3b97b0
+guid: 3abc7766258436246a2f3f3e0920b41e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7727699653290786065
-    second: Vent_Opend_0
+      213: 2612739604871995925
+    second: Exit_Dore_ClosedCropped_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vent_Opend_0
+      name: Exit_Dore_ClosedCropped_0
       rect:
         serializedVersion: 2
-        x: 919
-        y: 434
-        width: 75
-        height: 93
+        x: 0
+        y: 0
+        width: 125
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11d7e4d34ed4e3b60800000000000000
-      internalID: 7727699653290786065
+      spriteID: 5126df6e3d0524420800000000000000
+      internalID: 2612739604871995925
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Vent_Opend_0: 7727699653290786065
+      Exit_Dore_ClosedCropped_0: 2612739604871995925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private float moveAmount;
     private Rigidbody2D playerRigidbody;
+    private SpriteRenderer spriteRenderer;
 
     public float walkSpeed = 5f;
     public float jumpPower = 5f;
@@ -19,6 +19,16 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheckPosition;
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.5f);
     public LayerMask groundLayer;
+
+    // Sprites without upgrade
+    public Sprite leftFacingSprite;
+    public Sprite frontFacingSprite;
+    public Sprite rightFacingSprite;
+
+    // Sprites with upgrade
+    public Sprite leftFacingUPSprite;
+    public Sprite frontFacingUPSprite;
+    public Sprite rightFacingUPSprite;
 
     private void OnEnable()
     {
@@ -36,8 +46,9 @@ public class PlayerController : MonoBehaviour
         jumpAction = InputSystem.actions.FindAction("Jump");
 
         playerRigidbody = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
+    
     private void Update()
     {
         if (GameManager.Instance.PlayerMovementDisabled)
@@ -48,6 +59,20 @@ public class PlayerController : MonoBehaviour
         }
         
         moveAmount = moveAction.ReadValue<Vector2>().x;
+
+        // Change sprites
+        if (moveAmount > 0)
+        {
+            spriteRenderer.sprite = GameManager.Instance.HasScrewdriver() ? rightFacingUPSprite : rightFacingSprite;
+        }
+        else if (moveAmount < 0)
+        {
+            spriteRenderer.sprite = GameManager.Instance.HasScrewdriver() ? leftFacingUPSprite : leftFacingSprite;
+        }
+        else
+        {
+            spriteRenderer.sprite = GameManager.Instance.HasScrewdriver() ? frontFacingUPSprite : frontFacingSprite;
+        }
 
         Moving();
         
