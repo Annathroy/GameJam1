@@ -21,6 +21,8 @@ public class NPCWayPointMovement3 : MonoBehaviour
     [SerializeField] private bool isOnSpot2 = false;
     [SerializeField] private bool isOnSpot3 = false;
 
+    [SerializeField] private Transform doorPosition;
+    
     private NPCHopping npcHopping;
 
     private void Start()
@@ -31,6 +33,18 @@ public class NPCWayPointMovement3 : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.peopleSaved >= 4)
+        {
+            transform.position = new Vector2(transform.position.x, -4.3f);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-1f, -4.3f, 0f), 2f * Time.deltaTime);
+            npcHopping.enabled = true;
+        }
+        
+        if (Vector2.Distance(transform.position, new Vector3(-1f, -4.3f, 0f)) < 0.3f)
+        {
+            npcHopping.enabled = false;
+        }
+        
         if (reachedWayPoint1 == false && GameManager.Instance.isNpcUnscrewed)
         {
             MoveToWayPoint(wayPoint1);

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour
     public Sprite leftFacingUPSprite;
     public Sprite frontFacingUPSprite;
     public Sprite rightFacingUPSprite;
+
+    [SerializeField] private GameObject screwdriverPopUp;
 
     private void OnEnable()
     {
@@ -123,5 +126,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.SetParent(null);
         }
+    }
+
+    public IEnumerator ShowScrewdriverPopUp()
+    {
+        screwdriverPopUp.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        screwdriverPopUp.SetActive(false);
     }
 }

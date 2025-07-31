@@ -21,7 +21,8 @@ public class Screwdriver : MonoBehaviour
             GameManager.Instance.PickUpScrewdriver();
             openHatch.SetActive(true);
             closedHatch.SetActive(false);
-            
+
+            GameManager.Instance.ShowPlayerScrewdriverPopUp();
             UIManager.Instance.ShowScrewdriverImage();
             GetComponent<Collider2D>().enabled = false;
             isInside = false;

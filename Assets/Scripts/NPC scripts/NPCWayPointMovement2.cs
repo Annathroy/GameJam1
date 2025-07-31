@@ -27,6 +27,18 @@ public class NPCWayPointMovement2 : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.Instance.peopleSaved >= 4)
+        {
+            transform.position = new Vector2(transform.position.x, -4.3f);
+            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-2f, -4.3f, 0f), 2f * Time.deltaTime);
+            npcHoppingScript.enabled = true;
+        }
+        
+        if (Vector2.Distance(transform.position, new Vector3(-2f, -4.3f, 0f)) < 0.5f)
+        {
+            npcHoppingScript.enabled = false;
+        }
+        
         if (reachedWayPoint1 == false && GameManager.Instance.isTntExploded)
         {
             MoveToWayPoint(wayPoint1);

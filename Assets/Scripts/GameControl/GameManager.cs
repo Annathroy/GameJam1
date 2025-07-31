@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     private float timer;
 
+    public PlayerController playerRef;
+
     private void Start()
     {
         StartGame();
@@ -113,4 +115,34 @@ public class GameManager : MonoBehaviour
     {
         PlayerMovementDisabled = false;
     }
+
+    public void ShowPlayerScrewdriverPopUp()
+    {
+        StartCoroutine(playerRef.ShowScrewdriverPopUp());
+    }
+
+    // public void MoveNPCsToEnd(GameObject[] npcs)
+    // {
+    //     for (int i = 0; i < npcs.Length; i++)
+    //     {
+    //         switch (i)
+    //         {
+    //             case 0:
+    //                 transform.position = Vector2.MoveTowards(npcs[i].transform.position, new Vector3(-2f, -4.3f, 0f), 2f * Time.deltaTime);
+    //                 break;
+    //             case 1:
+    //                 transform.position = Vector2.MoveTowards(npcs[i].transform.position, new Vector3(-1f, -4.3f, 0f), 2f * Time.deltaTime);
+    //                 break;
+    //             case 2:
+    //                 transform.position = Vector2.MoveTowards(npcs[i].transform.position, new Vector3(1f, -4.3f, 0f), 2f * Time.deltaTime);
+    //                 break;
+    //             case 3:
+    //                 transform.position = Vector2.MoveTowards(npcs[i].transform.position, new Vector3(2f, -4.3f, 0f), 2f * Time.deltaTime);
+    //                 break;
+    //             
+    //             default:
+    //                 break;
+    //         }
+    //     }
+    // }
 }

@@ -12,6 +12,8 @@ public class NPCAtLocation : MonoBehaviour
     [SerializeField] private Sprite closedCapsule;
     [SerializeField] private Sprite brokenCapsule;
 
+    //[SerializeField] private GameObject[] npcs;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -25,6 +27,8 @@ public class NPCAtLocation : MonoBehaviour
             GameManager.Instance.peopleSaved = 4;
             spriteRenderer.sprite = brokenCapsule;
             transform.position = new Vector2(transform.position.x, transform.position.y - 0.5f);
+            
+            //GameManager.Instance.MoveNPCsToEnd(npcs);
             //GameManager.Instance.GameOver();
         }
     }
