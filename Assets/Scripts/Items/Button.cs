@@ -37,6 +37,7 @@ public class Button : MonoBehaviour
             ChamberControl();
             isButtonPressed = true;
             spriteRenderer.sprite = buttonPressed;
+            AudioManager.Instance.PlayButtonPressedSound();
             //GetComponent<Collider2D>().isTrigger = false;
         }
     }

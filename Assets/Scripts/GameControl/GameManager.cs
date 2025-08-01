@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     public bool isTntExploded = false;
     public bool isBoxInTriggerZone = false;
     public bool isBoxDestroyed = false;
-    public bool PlayerMovementDisabled { get; private set; } = false;
+    public bool PlayerMovementDisabled { get; set; } = false;
 
     [SerializeField] private bool exitedTheDoor;
     
@@ -35,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     private float timer;
 
+    private bool isGameOver;
+
     public PlayerController playerRef;
 
     private void Start()
@@ -54,9 +57,10 @@ public class GameManager : MonoBehaviour
             PlayerMovementDisabled = true;
         }
         
-        if (timer <= 0)
+        if (timer <= 0 && !isGameOver)
         {
             GameOver(true);
+            isGameOver = true;
         }
     }
 
@@ -68,13 +72,22 @@ public class GameManager : MonoBehaviour
         timer = timeToSavePeople;
         hasDrill = false;
         hasDynamite = false;
+        isGameOver = false;
     }
 
     public void GameOver()
     {
         Time.timeScale = 0f;
-        if (peopleSaved <= 0) UIManager.Instance.ShowGameOverBadEndingMenu();
-        else if (peopleSaved > 0 && peopleSaved < 4) UIManager.Instance.ShowGameOverNeutralEndingMenu();
+        
+        if (peopleSaved >= 4 && isBoxDestroyed)
+        {
+            UIManager.Instance.ShowTrueEnding();
+        }
+        else if (peopleSaved >= 0 && peopleSaved < 4)
+        {
+            AudioManager.Instance.PlayNeutralEnding();
+            UIManager.Instance.ShowGameOverNeutralEndingMenu();
+        }
         else if (peopleSaved == 4) UIManager.Instance.ShowGameOverGoodEndingMenu();
     }
 
@@ -82,6 +95,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         UIManager.Instance.ShowGameOverBadEndingMenu();
+        AudioManager.Instance.PlayBadEnding();
     }
 
     /// <summary>
@@ -109,8 +123,7 @@ public class GameManager : MonoBehaviour
 
     public void ExitThruDoor()
     {
-        UIManager.Instance.CloseDoorDialog();
-        GameOver();
+        StartCoroutine(DelayDoorExit());
     }
 
     public void ResumePlayerMovement()
@@ -123,6 +136,14 @@ public class GameManager : MonoBehaviour
         StartCoroutine(playerRef.ShowScrewdriverPopUp());
     }
 
+    private IEnumerator DelayDoorExit()
+    {
+        AudioManager.Instance.PlayDoorExitSound();
+        UIManager.Instance.CloseDoorDialog();
+        yield return new WaitForSeconds(0.5f);
+        GameOver();
+    }
+    
     // public void MoveNPCsToEnd(GameObject[] npcs)
     // {
     //     for (int i = 0; i < npcs.Length; i++)

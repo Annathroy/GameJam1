@@ -22,6 +22,8 @@ public class Screwdriver : MonoBehaviour
             openHatch.SetActive(true);
             closedHatch.SetActive(false);
 
+            AudioManager.Instance.PlayOpenHatch();
+            
             GameManager.Instance.ShowPlayerScrewdriverPopUp();
             UIManager.Instance.ShowScrewdriverImage();
             GetComponent<Collider2D>().enabled = false;

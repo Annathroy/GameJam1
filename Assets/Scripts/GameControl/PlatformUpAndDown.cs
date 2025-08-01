@@ -20,13 +20,16 @@ public class PlatformUpAndDown : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out PlayerController player) && GameManager.Instance.isPlayerBelowPlatform == true)
         {
+            AudioManager.Instance.PlayRobotCrash();
+            AudioManager.Instance.PlayNeutralEnding();
             UIManager.Instance.ShowGameOverCrushedEndingMenu();
             Time.timeScale = 0f; // Stop the game
         }
         if (collision.gameObject.TryGetComponent(out Box box) && GameManager.Instance.isBoxInTriggerZone == true)
         {
+            AudioManager.Instance.PlayBoxCrash();
             box.DestroyBox();
         }
     }
-
+    
 }

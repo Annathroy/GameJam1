@@ -13,6 +13,7 @@ public class Screw : MonoBehaviour
 
     private float elapsedTime;
     private bool isInside;
+    private bool isScrewing;
 
     private Coroutine wiggleCoroutine;
 
@@ -39,7 +40,16 @@ public class Screw : MonoBehaviour
                 if (wiggleCoroutine != null) StopCoroutine(wiggleCoroutine);
                 wiggleCoroutine = StartCoroutine(WiggleTheScrew());
             }
-            else isMoving = true;
+            else
+            {
+                isMoving = true;
+                if (!isScrewing)
+                {
+                    AudioManager.Instance.PlayScrewdriverSound();
+                    GameManager.Instance.PlayerMovementDisabled = true;
+                    isScrewing = true;
+                }
+            }
         }
         
         if (isWiggling)
@@ -51,7 +61,7 @@ public class Screw : MonoBehaviour
         if (isMoving)
         {
             elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / 1f);
+            float t = Mathf.Clamp01(elapsedTime / 3.9f);
 
             transform.position = Vector2.Lerp(startPosition, targetPosition, t);
 
@@ -62,6 +72,8 @@ public class Screw : MonoBehaviour
                 isMoving = false;
                 // TODO: Change capsule model
                 capsuleRenderer.sprite = openCapsule;
+                
+                GameManager.Instance.PlayerMovementDisabled = false;
                 Destroy(gameObject);
                 
             }
@@ -96,6 +108,7 @@ public class Screw : MonoBehaviour
     private IEnumerator WiggleTheScrew()
     {
         isWiggling = true;
+        AudioManager.Instance.PlayVibrateScrew();
         yield return new WaitForSeconds(1.5f);
         isWiggling = false;
     }

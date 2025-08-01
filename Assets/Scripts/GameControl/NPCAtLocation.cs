@@ -14,6 +14,8 @@ public class NPCAtLocation : MonoBehaviour
 
     //[SerializeField] private GameObject[] npcs;
 
+    private bool isBroken;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,9 +26,14 @@ public class NPCAtLocation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.NpcAtLocation == 3 && isPlayerAtLocation)
         {
-            GameManager.Instance.peopleSaved = 4;
-            spriteRenderer.sprite = brokenCapsule;
-            transform.position = new Vector2(transform.position.x, transform.position.y - 0.5f);
+            if (!isBroken)
+            {
+                GameManager.Instance.peopleSaved = 4;
+                spriteRenderer.sprite = brokenCapsule;
+                AudioManager.Instance.PlayGlassBreak();
+                transform.position = new Vector2(transform.position.x, transform.position.y - 0.5f);
+                isBroken = true;
+            }
             
             //GameManager.Instance.MoveNPCsToEnd(npcs);
             //GameManager.Instance.GameOver();

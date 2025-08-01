@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverCrushedEndingMenu;
     public GameObject creditsPanel;
     public GameObject dialogPanel;
+    public GameObject trueEndingPanel;
 
     [SerializeField] private GameObject screwdriverActiveImage;
     [SerializeField] private GameObject dynamiteActiveImage;
@@ -71,7 +72,7 @@ public class UIManager : MonoBehaviour
         optionsMenu.SetActive(false);
         gameOverBadEndingMenu.SetActive(false);
         
-        gameOverNeutralEndingText.text = $"You saved {GameManager.Instance.peopleSaved} people...";
+        gameOverNeutralEndingText.text = $"{GameManager.Instance.peopleSaved}";
         gameOverNeutralEndingMenu.SetActive(true);
         
         gameOverGoodEndingMenu.SetActive(false);
@@ -103,6 +104,12 @@ public class UIManager : MonoBehaviour
         gameOverNeutralEndingMenu.SetActive(false);
         gameOverGoodEndingMenu.SetActive(false);
         gameOverCrushedEndingMenu.SetActive(true);
+    }
+
+    public void ShowTrueEnding()
+    {
+        trueEndingPanel.SetActive(true);
+        gameMenu.SetActive(false);
     }
 
     public void ShowCreditsPanel()

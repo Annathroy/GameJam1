@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
         if (jumpAction.WasPressedThisFrame() && isGrounded())
         {
             Jump();
+            AudioManager.Instance.PlayPlayerJump();
         }
     }
 

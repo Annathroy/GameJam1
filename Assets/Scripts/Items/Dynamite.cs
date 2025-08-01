@@ -12,6 +12,7 @@ public class Dynamite : MonoBehaviour
     private bool isInside;
     private bool isMoving;
     private bool isWiggling;
+    private bool isScrewing;
     
     private float elapsedTime;
 
@@ -30,6 +31,12 @@ public class Dynamite : MonoBehaviour
             if (GameManager.Instance.HasScrewdriver())
             {
                 isMoving = true;
+                if (!isScrewing)
+                {
+                    AudioManager.Instance.PlayScrewdriverSound();
+                    GameManager.Instance.PlayerMovementDisabled = true;
+                    isScrewing = true;
+                }
             }
             else
             {
@@ -47,7 +54,7 @@ public class Dynamite : MonoBehaviour
         if (isMoving)
         {
             elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / 1f);
+            float t = Mathf.Clamp01(elapsedTime / 3.9f);
 
             screwPrefab.transform.position = Vector2.Lerp(startPosition, targetPosition, t);
 
@@ -57,7 +64,8 @@ public class Dynamite : MonoBehaviour
                 GameManager.Instance.PickUpDynamite();
                 
                 UIManager.Instance.ShowDynamiteImage();
-                
+
+                GameManager.Instance.PlayerMovementDisabled = false;
                 // TODO: Change capsule model
                 Destroy(gameObject);
             }
@@ -83,6 +91,7 @@ public class Dynamite : MonoBehaviour
     private IEnumerator WiggleTheScrew()
     {
         isWiggling = true;
+        AudioManager.Instance.PlayVibrateScrew();
         yield return new WaitForSeconds(1.5f);
         isWiggling = false;
     }

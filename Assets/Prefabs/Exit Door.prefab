@@ -215,12 +215,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2612739604871995925, guid: 3abc7766258436246a2f3f3e0920b41e, type: 3}
+  m_Sprite: {fileID: 1633774896643070332, guid: 7d1552df4dd719a41811688ec0937fb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.26, y: 2.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -264,8 +264,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 2.13}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.26, y: 2.12}
+    newSize: {x: 1.26, y: 2.12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -285,6 +285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionText: {fileID: 4789089240305654113}
+  spriteRenderer: {fileID: 0}
+  closedDoor: {fileID: 1633774896643070332, guid: 7d1552df4dd719a41811688ec0937fb6, type: 3}
+  openDoor: {fileID: 3481513448587965268, guid: 63136b31f6e4567469217b30d44cb112, type: 3}
 --- !u!1 &7136375839526987271
 GameObject:
   m_ObjectHideFlags: 0
