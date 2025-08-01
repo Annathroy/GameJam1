@@ -15,6 +15,8 @@ public class DynamiteCapsule : MonoBehaviour
     
     private SpriteRenderer spriteRenderer;
 
+    private bool isExploded;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -25,8 +27,13 @@ public class DynamiteCapsule : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.HasDynamite() && isInside)
         {
-            plantedTnt.SetActive(true);
-            StartCoroutine(WaitForExplosion());
+            if (!isExploded)
+            {
+                plantedTnt.SetActive(true);
+                StartCoroutine(WaitForExplosion());
+                isExploded = true;
+            }
+            
         }
     }
 
