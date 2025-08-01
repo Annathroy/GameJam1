@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip mainMenuBackgroundMusic;
     [SerializeField] private AudioClip nuclearBackgroundMusic;
     [SerializeField] private AudioClip neutralBackgroundMusic;
+	[SerializeField] private AudioClip goodBackgroundMusic;
+	[SerializeField] private AudioClip trueBackgroundMusic;
 
     [SerializeField] private AudioClip doorExitSound;
     [SerializeField] private AudioClip openHatchSound;
@@ -145,6 +147,22 @@ public class AudioManager : MonoBehaviour
     {
         backgroundMusicSource.Stop();
         backgroundMusicSource.resource = neutralBackgroundMusic;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
+    }
+
+    public void PlayGoodEnding()
+    {
+        backgroundMusicSource.Stop();
+        backgroundMusicSource.resource = goodBackgroundMusic;
+        backgroundMusicSource.loop = true;
+        backgroundMusicSource.Play();
+    }
+
+    public void PlayTrueEnding()
+    {
+        backgroundMusicSource.Stop();
+        backgroundMusicSource.resource = trueBackgroundMusic;
         backgroundMusicSource.loop = true;
         backgroundMusicSource.Play();
     }

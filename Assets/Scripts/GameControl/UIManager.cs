@@ -1,6 +1,6 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject screwdriverActiveImage;
     [SerializeField] private GameObject dynamiteActiveImage;
+    [SerializeField] private GameObject mushroomCloud;
 
     [Header("Texts")] [SerializeField] private TMP_Text timerText;
 
@@ -30,7 +31,6 @@ public class UIManager : MonoBehaviour
         {
             Instance = this;
         }
-
     }
 
     public void ShowMainMenu()
@@ -57,6 +57,8 @@ public class UIManager : MonoBehaviour
         gameOverBadEndingMenu.SetActive(true);
         gameOverNeutralEndingMenu.SetActive(false);
         gameOverGoodEndingMenu.SetActive(false);
+        
+        //StartCoroutine(DelayBadEndingScreen());
     }
     public void ShowGameOverGoodEndingMenu()
     {
@@ -126,7 +128,10 @@ public class UIManager : MonoBehaviour
 
     public void UpdateTimerText(int seconds)
     {
-        timerText.text = $"{seconds}";
+        int minutes = seconds / 60;
+        int remainingSeconds = seconds % 60;
+        
+        timerText.text = $"{minutes:D2}:{remainingSeconds:D2}";
     }
 
     public void ShowDoorDialog()
@@ -152,5 +157,12 @@ public class UIManager : MonoBehaviour
     public void HideDynamiteImage()
     {
         dynamiteActiveImage.gameObject.SetActive(false);
+    }
+
+    private IEnumerator DelayBadEndingScreen()
+    {
+        mushroomCloud.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        mushroomCloud.SetActive(false);
     }
 }

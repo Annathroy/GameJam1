@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Info")]
     public int peopleSaved = 0;
-    [SerializeField] private float timeToSavePeople = 70f;
+    [SerializeField] private float timeToSavePeople = 120f;
     public int NpcAtLocation = 0;
     public bool spot1Taken = false;
     public bool spot2Taken = false;
@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
         
         if (peopleSaved >= 4 && isBoxDestroyed)
         {
+            AudioManager.Instance.PlayTrueEnding();
             UIManager.Instance.ShowTrueEnding();
         }
         else if (peopleSaved >= 0 && peopleSaved < 4)
@@ -88,7 +89,11 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlayNeutralEnding();
             UIManager.Instance.ShowGameOverNeutralEndingMenu();
         }
-        else if (peopleSaved == 4) UIManager.Instance.ShowGameOverGoodEndingMenu();
+        else if (peopleSaved == 4)
+        {
+            AudioManager.Instance.PlayGoodEnding();
+            UIManager.Instance.ShowGameOverGoodEndingMenu();
+        }
     }
 
     public void GameOver(bool isTimeOut)
