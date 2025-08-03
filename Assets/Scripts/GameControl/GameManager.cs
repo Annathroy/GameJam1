@@ -12,13 +12,21 @@ public class GameManager : MonoBehaviour
     public bool PlayerMovementDisabled { get; set; } = false;
 
     [SerializeField] private bool exitedTheDoor;
-    
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
         }
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer("Ground"),
+            LayerMask.NameToLayer("NPCLayer"),
+            true);          // true = ignore, false = re-enable
+        Physics2D.IgnoreLayerCollision(
+            LayerMask.NameToLayer("Default"),
+            LayerMask.NameToLayer("NPCLayer"),
+            true);          // true = ignore, false = re-enable
     }
 
     [Header("Items")]
@@ -50,13 +58,13 @@ public class GameManager : MonoBehaviour
     {
         timer -= Time.deltaTime;
         UIManager.Instance.UpdateTimerText(Mathf.RoundToInt(timer));
-        
+
         if (Input.GetKeyDown(KeyCode.E) && isPlayerTouchingExitDoor)
         {
             UIManager.Instance.ShowDoorDialog();
             PlayerMovementDisabled = true;
         }
-        
+
         if (timer <= 0 && !isGameOver)
         {
             GameOver(true);
@@ -78,7 +86,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0f;
-        
+
         if (peopleSaved >= 4 && isBoxDestroyed)
         {
             AudioManager.Instance.PlayTrueEnding();
@@ -148,7 +156,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         GameOver();
     }
-    
+
     // public void MoveNPCsToEnd(GameObject[] npcs)
     // {
     //     for (int i = 0; i < npcs.Length; i++)
