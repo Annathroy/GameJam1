@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class NPCWayPointMovement3 : MonoBehaviour
@@ -22,13 +21,13 @@ public class NPCWayPointMovement3 : MonoBehaviour
     [SerializeField] private bool isOnSpot3 = false;
 
     [SerializeField] private Transform doorPosition;
-    
-    private NPCHopping npcHopping;
+
+    private NPCHopping npcHoppingScript;
 
     private void Start()
     {
-        npcHopping = GetComponent<NPCHopping>();
-        npcHopping.enabled = false;
+        npcHoppingScript = GetComponent<NPCHopping>();
+        npcHoppingScript.enabled = false;
     }
 
     private void Update()
@@ -36,58 +35,60 @@ public class NPCWayPointMovement3 : MonoBehaviour
         if (GameManager.Instance.peopleSaved >= 4)
         {
             transform.position = new Vector2(transform.position.x, -4.3f);
-            transform.position = Vector2.MoveTowards(transform.position, new Vector3(-1f, -4.3f, 0f), 1f * Time.deltaTime);
-            npcHopping.enabled = true;
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(-1f, -4.3f), 1f * Time.deltaTime);
+            npcHoppingScript.enabled = true;
         }
-        
-        if (Vector2.Distance(transform.position, new Vector3(-1f, -4.3f, 0f)) < 0.3f)
+        if (Vector2.Distance(transform.position, new Vector2(-1f, -4.3f)) < 0.3f)
         {
-            npcHopping.enabled = false;
+            npcHoppingScript.enabled = false;
         }
-        
-        if (reachedWayPoint1 == false && GameManager.Instance.isNpcUnscrewed)
+        if (GameManager.Instance.peopleSaved < 4)
         {
-            MoveToWayPoint(wayPoint1);
-            npcHopping.enabled = true;
-        }
-        if (reachedWayPoint1 && !reachedWayPoint2)
-        {
-            MoveToWayPoint(wayPoint2);
-            npcHopping.enabled = false;
-        }
-        else if (reachedWayPoint2 && !reachedWayPoint3)
-        {
-            MoveToWayPoint(wayPoint3);
-            npcHopping.enabled = true;
-        }
-
-        else if (reachedWayPoint3 && !reachedWayPoint4)
-        {
-            MoveToWayPoint(wayPoint4);
-            npcHopping.enabled = false;
-        }
-        else if (reachedWayPoint4 && !reachedWayPoint5)
-        {
-            MoveToWayPoint(wayPoint5);
-            npcHopping.enabled = true;
-        }
-        else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == false && isOnSpot2 == false && isOnSpot3 == false)
-        {
-            MoveToWayPoint(wayPoint6);
-            npcHopping.enabled = false;
-        }
-        else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == false && isOnSpot1 == false && isOnSpot3 == false)
-        {
-            MoveToWayPoint(wayPoint7);
-            npcHopping.enabled = false;
-        }
-        else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == true && GameManager.Instance.spot3Taken == false && isOnSpot1 == false && isOnSpot2 == false)
-        {
-            MoveToWayPoint(wayPoint8);
-            npcHopping.enabled = false;
-        }
 
 
+            if (reachedWayPoint1 == false && GameManager.Instance.isNpcUnscrewed)
+            {
+                MoveToWayPoint(wayPoint1);
+                npcHoppingScript.enabled = true;
+            }
+            if (reachedWayPoint1 && !reachedWayPoint2)
+            {
+                MoveToWayPoint(wayPoint2);
+                npcHoppingScript.enabled = false;
+            }
+            else if (reachedWayPoint2 && !reachedWayPoint3)
+            {
+                MoveToWayPoint(wayPoint3);
+                npcHoppingScript.enabled = true;
+            }
+
+            else if (reachedWayPoint3 && !reachedWayPoint4)
+            {
+                MoveToWayPoint(wayPoint4);
+                npcHoppingScript.enabled = false;
+            }
+            else if (reachedWayPoint4 && !reachedWayPoint5)
+            {
+                MoveToWayPoint(wayPoint5);
+                npcHoppingScript.enabled = true;
+            }
+            else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == false && isOnSpot2 == false && isOnSpot3 == false)
+            {
+                MoveToWayPoint(wayPoint6);
+                npcHoppingScript.enabled = false;
+            }
+            else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == false && isOnSpot1 == false && isOnSpot3 == false)
+            {
+                MoveToWayPoint(wayPoint7);
+                npcHoppingScript.enabled = false;
+            }
+            else if (reachedWayPoint5 && GameManager.Instance.spot1Taken == true && GameManager.Instance.spot2Taken == true && GameManager.Instance.spot3Taken == false && isOnSpot1 == false && isOnSpot2 == false)
+            {
+                MoveToWayPoint(wayPoint8);
+                npcHoppingScript.enabled = false;
+            }
+
+        }
     }
     private void MoveToWayPoint(GameObject wayPoint)
     {
