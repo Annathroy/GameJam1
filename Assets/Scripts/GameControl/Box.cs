@@ -37,6 +37,8 @@ public class Box : MonoBehaviour
         
         Destroy(gameObject.GetComponent<Rigidbody2D>());
         Destroy(gameObject.GetComponent<BoxCollider2D>());
-        transform.position = new Vector2(transform.position.x, transform.position.y - 0.7f);
+        transform.position = new Vector2(transform.position.x, transform.position.y - 0.3f);
+        transform.localScale = new Vector2(0.3f, 0.07f);
+        evilSnail.transform.localScale = new Vector2(1.5f, 6f);
     }
 }

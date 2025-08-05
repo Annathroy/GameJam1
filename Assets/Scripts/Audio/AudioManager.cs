@@ -8,7 +8,8 @@ public class AudioManager : MonoBehaviour
     
     public TMP_Text volumeText;
     public Slider volumeSlider;
-    public AudioSource volumeSource;
+    public AudioSource sfxVolumeSource;
+    public AudioSource musicVolumeSource;
     public AudioSource backgroundMusicSource;
 
     [Header("Audio Clips")] 
@@ -52,17 +53,18 @@ public class AudioManager : MonoBehaviour
     public void VolumeFunction(float volume)
     {
         volumeText.text = $"Volume: {Mathf.RoundToInt(volume*100)}%";
-        volumeSource.volume = volume;
+        sfxVolumeSource.volume = volume;
+        musicVolumeSource.volume = volume;
     }
 
     public void PlayButtonClickSound()
     {
-        volumeSource.PlayOneShot(buttonClickSound);
+        sfxVolumeSource.PlayOneShot(buttonClickSound);
     }
 
     public void PlayPickUpSound()
     {
-        volumeSource.PlayOneShot(pickUpSound);
+        sfxVolumeSource.PlayOneShot(pickUpSound);
     }
 
     /// <summary>
@@ -70,12 +72,12 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayButtonPressedSound()
     {
-        volumeSource.PlayOneShot(buttonPressSound);
+        sfxVolumeSource.PlayOneShot(buttonPressSound);
     }
 
     public void PlantDynamiteSound()
     {
-        volumeSource.PlayOneShot(dynamiteSound);
+        sfxVolumeSource.PlayOneShot(dynamiteSound);
     }
 
     public void PlayGameBackgroundMusic()
@@ -96,42 +98,42 @@ public class AudioManager : MonoBehaviour
 
     public void PlayDoorExitSound()
     {
-        volumeSource.PlayOneShot(doorExitSound);
+        sfxVolumeSource.PlayOneShot(doorExitSound);
     }
 
     public void PlayOpenHatch()
     {
-        volumeSource.PlayOneShot(openHatchSound);
+        sfxVolumeSource.PlayOneShot(openHatchSound);
     }
 
     public void PlayRobotCrash()
     {
-        volumeSource.PlayOneShot(robotCrashSound);
+        sfxVolumeSource.PlayOneShot(robotCrashSound);
     }
 
     public void PlayBoxCrash()
     {
-        volumeSource.PlayOneShot(boxCrashSound);
+        sfxVolumeSource.PlayOneShot(boxCrashSound);
     }
 
     public void PlayVibrateScrew()
     {
-        volumeSource.PlayOneShot(vibrateScrew);
+        sfxVolumeSource.PlayOneShot(vibrateScrew);
     }
 
     public void PlayScrewdriverSound()
     {
-        volumeSource.PlayOneShot(screwdriverSound);
+        sfxVolumeSource.PlayOneShot(screwdriverSound);
     }
 
     public void PlayPlayerJump()
     {
-        volumeSource.PlayOneShot(playerJumpSound);
+        sfxVolumeSource.PlayOneShot(playerJumpSound);
     }
 
     public void PlayGlassBreak()
     {
-        volumeSource.PlayOneShot(glassBreakSound);
+        sfxVolumeSource.PlayOneShot(glassBreakSound);
     }
 
     public void PlayBadEnding()
@@ -140,7 +142,7 @@ public class AudioManager : MonoBehaviour
         backgroundMusicSource.resource = nuclearBackgroundMusic;
         backgroundMusicSource.loop = true;
         backgroundMusicSource.Play();
-        volumeSource.PlayOneShot(nuclearExplosionSound);
+        sfxVolumeSource.PlayOneShot(nuclearExplosionSound);
     }
 
     public void PlayNeutralEnding()
