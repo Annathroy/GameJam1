@@ -21,7 +21,7 @@ public class Dynamite : MonoBehaviour
     private void Start()
     {
         startPosition = screwPrefab.transform.position;
-        targetPosition = startPosition + Vector2.left * 0.5f;
+        targetPosition = startPosition + Vector2.left * 0.3f;
     }
     
     private void Update()

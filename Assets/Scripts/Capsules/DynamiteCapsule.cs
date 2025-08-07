@@ -10,8 +10,8 @@ public class DynamiteCapsule : MonoBehaviour
 
     private bool isInside;
 
-    [SerializeField] private Sprite closedCapsule;
-    [SerializeField] private Sprite brokenCapsule;
+    [SerializeField] private GameObject closedCapsule;
+    [SerializeField] private GameObject brokenCapsule;
     
     private SpriteRenderer spriteRenderer;
 
@@ -19,8 +19,8 @@ public class DynamiteCapsule : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = closedCapsule;
+        closedCapsule.SetActive(true);
+        brokenCapsule.SetActive(false);
     }
 
     private void Update()
@@ -64,8 +64,9 @@ public class DynamiteCapsule : MonoBehaviour
         UIManager.Instance.HideDynamiteImage();
         yield return new WaitForSeconds(1.5f);
         AudioManager.Instance.PlantDynamiteSound();
-
-        spriteRenderer.sprite = brokenCapsule;
+        
+        closedCapsule.SetActive(false);
+        brokenCapsule.SetActive(true);
         
         plantedTnt.SetActive(false);
         yield return new WaitForSeconds(0.5f);

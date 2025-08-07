@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 15a2a7d9dfb744940a773d470613218d
+guid: 813a5fbc547b9b649977f4d09afc7569
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9192902831106091371
-    second: Capsule_button_closed_0
+      213: -6034315820146033744
+    second: capsule_screw_closed-no_screw_glass_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Capsule_button_closed_0
+      name: capsule_screw_closed-no_screw_glass_0
       rect:
         serializedVersion: 2
-        x: 1659
-        y: 76
-        width: 194
-        height: 146
+        x: 14
+        y: 18
+        width: 73
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5961d39c49f3c6080800000000000000
-      internalID: -9192902831106091371
+      spriteID: 0bbfca59bbdc14ca0800000000000000
+      internalID: -6034315820146033744
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Capsule_button_closed_0: -9192902831106091371
+      capsule_screw_closed-no_screw_glass_0: -6034315820146033744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

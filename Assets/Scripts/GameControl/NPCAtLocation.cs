@@ -7,10 +7,8 @@ public class NPCAtLocation : MonoBehaviour
     public bool isPlayerAtLocation = false;
     [SerializeField] private TextMeshProUGUI interactText;
 
-    private SpriteRenderer spriteRenderer;
-
-    [SerializeField] private Sprite closedCapsule;
-    [SerializeField] private Sprite brokenCapsule;
+    [SerializeField] private GameObject closedCapsule;
+    [SerializeField] private GameObject brokenCapsule;
 
     //[SerializeField] private GameObject[] npcs;
 
@@ -18,8 +16,8 @@ public class NPCAtLocation : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = closedCapsule;
+        closedCapsule.SetActive(true);
+        brokenCapsule.SetActive(false);
     }
 
     private void Update()
@@ -29,7 +27,10 @@ public class NPCAtLocation : MonoBehaviour
             if (!isBroken)
             {
                 GameManager.Instance.peopleSaved = 4;
-                spriteRenderer.sprite = brokenCapsule;
+                
+                closedCapsule.SetActive(false);
+                brokenCapsule.SetActive(true);
+                
                 AudioManager.Instance.PlayGlassBreak();
                 transform.position = new Vector2(transform.position.x, transform.position.y - 0.5f);
                 isBroken = true;

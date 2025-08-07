@@ -17,15 +17,15 @@ public class Screw : MonoBehaviour
 
     private Coroutine wiggleCoroutine;
 
-    [SerializeField] private SpriteRenderer capsuleRenderer;
-
-    [SerializeField] private Sprite closedCapsule;
-    [SerializeField] private Sprite openCapsule;
+    [SerializeField] private GameObject closedCapsule;
+    [SerializeField] private GameObject openCapsule;
         
     
     private void Start()
     {
-        capsuleRenderer.sprite = closedCapsule;
+        closedCapsule.SetActive(true);
+        openCapsule.SetActive(false);
+        
         startPosition = transform.position;
         targetPosition = startPosition + Vector2.left * 0.5f;
     }
@@ -70,8 +70,10 @@ public class Screw : MonoBehaviour
                 GameManager.Instance.isNpcUnscrewed = true;
                 GameManager.Instance.peopleSaved++;
                 isMoving = false;
-                // TODO: Change capsule model
-                capsuleRenderer.sprite = openCapsule;
+                
+                // Change capsule model
+                closedCapsule.SetActive(false);
+                openCapsule.SetActive(true);
                 
                 GameManager.Instance.PlayerMovementDisabled = false;
                 Destroy(gameObject);
