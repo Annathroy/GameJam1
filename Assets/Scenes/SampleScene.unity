@@ -4329,8 +4329,10 @@ Transform:
   - {fileID: 1412792285}
   - {fileID: 642024400}
   - {fileID: 1423509919}
+  - {fileID: 1524176448}
   - {fileID: 2029948217}
   - {fileID: 551181112}
+  - {fileID: 1302104177}
   - {fileID: 1154930473}
   - {fileID: 1009928113}
   - {fileID: 1290833943}
@@ -7241,8 +7243,7 @@ Transform:
   m_LocalPosition: {x: 5.3059, y: -2, z: 0}
   m_LocalScale: {x: 0.19, y: 0.165, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1302104177}
+  m_Children: []
   m_Father: {fileID: 682506655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1154930474
@@ -8313,11 +8314,11 @@ Transform:
   m_GameObject: {fileID: 1302104174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08368493, y: -19.393938, z: 0}
-  m_LocalScale: {x: 9.473684, y: 8.484848, z: 1}
+  m_LocalPosition: {x: 5.29, y: -5.2, z: 0}
+  m_LocalScale: {x: 1.8, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1154930473}
+  m_Father: {fileID: 682506655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1308804902
 GameObject:
@@ -10452,11 +10453,11 @@ Transform:
   m_GameObject: {fileID: 1524176446}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.47421083, y: -19.393938, z: 0}
-  m_LocalScale: {x: 10.657895, y: 8.484848, z: 1}
+  m_LocalPosition: {x: -3.852, y: -5.2, z: 0}
+  m_LocalScale: {x: 2.025, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2029948217}
+  m_Father: {fileID: 682506655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1524176449
 MonoBehaviour:
@@ -13208,8 +13209,7 @@ Transform:
   m_LocalPosition: {x: -3.7619, y: -2, z: 0}
   m_LocalScale: {x: 0.19, y: 0.165, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1524176448}
+  m_Children: []
   m_Father: {fileID: 682506655}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2029948218
@@ -13708,7 +13708,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6779747f819bf3643a2c2b989ea081da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7058824}
   m_FlipX: 0
